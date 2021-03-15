@@ -1,0 +1,45 @@
+<h1>Produit par ID : {{results.0.id}}</h1>
+<div>
+    <h2>{{results.0.name}}</h2>
+    <h2>{{results.0.price}}</h2>
+    <p>{{results.0.description}}</p>
+</div>
+<br>
+
+<h1>Produit par nom : '{{results.1.name}}'</h1>
+<div>
+    <h2>{{results.1.name}}</h2>
+    <h2>{{results.1.price}}</h2>
+    <p>{{results.1.description}}</p>
+</div>
+<br>
+
+<h1>Produit par nom et prix : '{{results.2.name}}' & {{results.2.price}} €</h1>
+<div>
+    <h2>{{results.2.name}}</h2>
+    <h2>{{results.2.price}}</h2>
+    <p>{{results.2.description}}</p>
+</div>
+<br>
+
+<h1>Tous les produits par nom 'Keyboard' par prix ascendant</h1>
+{% for product in results.3 %}
+    <div>
+        <h3>N°{{product.id}}</h3>
+        <h4>{{product.name}}</h4>
+        <h4>{{product.price}}</h4>
+        <p>{{product.description}}</p>
+    </div>
+    <br>
+{% endfor %}
+
+<h1>Tous les produits</h1>
+{% for product in results.4 %}
+    <div>
+        <h3>N°{{product.id}}</h3>
+        <h4>{{product.name}}</h4>
+        <h4>{{product.price}}</h4>
+        <p>{{product.description}}</p>
+    </div>
+    <br>
+{% endfor %}
